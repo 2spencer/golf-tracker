@@ -1,5 +1,13 @@
 import type { Player, Round, SeasonStanding, H2HRecord } from "./types";
 
+function sumHoles(holes: (number | null)[]): number {
+  return holes.reduce<number>((a, b) => a + (b ?? 0), 0);
+}
+
+function isNineHoleRound(round: Round): boolean {
+  return round.holes === "front9" || round.holes === "back9";
+}
+
 export function computeSeasonStandings(
   players: Player[],
   rounds: Round[]
@@ -9,12 +17,32 @@ export function computeSeasonStandings(
       r.players.some((p) => p.playerId === player.id)
     );
 
-    const grossScores = playerRounds.map(
+    // Separate 9-hole and 18-hole rounds for averaging
+    const fullRounds = playerRounds.filter((r) => !isNineHoleRound(r));
+    const nineRounds = playerRounds.filter((r) => isNineHoleRound(r));
+
+    const fullGross = fullRounds.map(
       (r) => r.players.find((p) => p.playerId === player.id)!.grossScore
     );
-    const netScores = playerRounds.map(
+    const fullNet = fullRounds.map(
       (r) => r.players.find((p) => p.playerId === player.id)!.netScore
     );
+    const nineGross = nineRounds.map(
+      (r) => r.players.find((p) => p.playerId === player.id)!.grossScore
+    );
+    const nineNet = nineRounds.map(
+      (r) => r.players.find((p) => p.playerId === player.id)!.netScore
+    );
+
+    // Normalize 9-hole scores to 18-hole equivalents for averaging
+    const allGross = [
+      ...fullGross,
+      ...nineGross.map((s) => s * 2),
+    ];
+    const allNet = [
+      ...fullNet,
+      ...nineNet.map((s) => s * 2),
+    ];
 
     let grossWins = 0;
     let netWins = 0;
@@ -37,22 +65,22 @@ export function computeSeasonStandings(
       player,
       roundsPlayed: playerRounds.length,
       grossAvg:
-        grossScores.length > 0
+        allGross.length > 0
           ? Math.round(
-              (grossScores.reduce((a, b) => a + b, 0) / grossScores.length) * 10
+              (allGross.reduce((a, b) => a + b, 0) / allGross.length) * 10
             ) / 10
           : 0,
       netAvg:
-        netScores.length > 0
+        allNet.length > 0
           ? Math.round(
-              (netScores.reduce((a, b) => a + b, 0) / netScores.length) * 10
+              (allNet.reduce((a, b) => a + b, 0) / allNet.length) * 10
             ) / 10
           : 0,
       grossWins,
       netWins,
       moneyWon,
-      bestGross: grossScores.length > 0 ? Math.min(...grossScores) : 0,
-      bestNet: netScores.length > 0 ? Math.min(...netScores) : 0,
+      bestGross: allGross.length > 0 ? Math.min(...allGross) : 0,
+      bestNet: allNet.length > 0 ? Math.min(...allNet) : 0,
     };
   });
 }
@@ -106,14 +134,14 @@ export function computeH2H(
 export function getPlayerRoundScores(
   playerId: string,
   rounds: Round[]
-): { date: string; course: string; gross: number; net: number; front9: number; back9: number }[] {
+): { date: string; course: string; gross: number; net: number; front9: number; back9: number; nineHole: boolean }[] {
   return rounds
     .filter((r) => r.players.some((p) => p.playerId === playerId))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
     .map((r) => {
       const rp = r.players.find((p) => p.playerId === playerId)!;
-      const front9 = rp.holesData.slice(0, 9).reduce((a, b) => a + b, 0);
-      const back9 = rp.holesData.slice(9).reduce((a, b) => a + b, 0);
+      const front9 = sumHoles(rp.holesData.slice(0, 9));
+      const back9 = sumHoles(rp.holesData.slice(9));
       return {
         date: r.date,
         course: r.course,
@@ -121,6 +149,7 @@ export function getPlayerRoundScores(
         net: rp.netScore,
         front9,
         back9,
+        nineHole: isNineHoleRound(r),
       };
     });
 }
@@ -141,10 +170,10 @@ export function getCompareData(
   return sharedRounds.map((r) => {
     const p1 = r.players.find((p) => p.playerId === player1Id)!;
     const p2 = r.players.find((p) => p.playerId === player2Id)!;
-    const p1Front = p1.holesData.slice(0, 9).reduce((a, b) => a + b, 0);
-    const p1Back = p1.holesData.slice(9).reduce((a, b) => a + b, 0);
-    const p2Front = p2.holesData.slice(0, 9).reduce((a, b) => a + b, 0);
-    const p2Back = p2.holesData.slice(9).reduce((a, b) => a + b, 0);
+    const p1Front = sumHoles(p1.holesData.slice(0, 9));
+    const p1Back = sumHoles(p1.holesData.slice(9));
+    const p2Front = sumHoles(p2.holesData.slice(0, 9));
+    const p2Back = sumHoles(p2.holesData.slice(9));
 
     return {
       date: r.date,
@@ -159,6 +188,7 @@ export function getCompareData(
       p1Back,
       p2Front,
       p2Back,
+      nineHole: isNineHoleRound(r),
     };
   });
 }

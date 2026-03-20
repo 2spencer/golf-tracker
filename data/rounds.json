@@ -93,5 +93,41 @@
         { "playerId": "p1", "amount": 5, "holes": [12] }
       ]
     }
+  },
+  {
+    "id": "r4",
+    "date": "2026-03-20",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 47,
+        "netScore": 41,
+        "holesData": [null, null, null, null, null, null, null, null, null, 5, 5, 8, 3, 5, 4, 7, 5, 5]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 52,
+        "netScore": 38,
+        "holesData": [null, null, null, null, null, null, null, null, null, 6, 6, 8, 6, 4, 6, 5, 5, 6]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 49,
+        "netScore": 34,
+        "holesData": [null, null, null, null, null, null, null, null, null, 6, 7, 5, 4, 9, 4, 4, 7, 3]
+      },
+      {
+        "playerId": "p7",
+        "grossScore": 49,
+        "netScore": 37,
+        "holesData": [null, null, null, null, null, null, null, null, null, 5, 6, 6, 6, 5, 4, 7, 5, 5]
+      }
+    ],
+    "skinsResults": {
+      "pot": 0,
+      "winners": []
+    }
   }
 ]

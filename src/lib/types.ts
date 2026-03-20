@@ -8,7 +8,7 @@ export interface RoundPlayer {
   playerId: string;
   grossScore: number;
   netScore: number;
-  holesData: number[];
+  holesData: (number | null)[];
 }
 
 export interface SkinWinner {
@@ -26,6 +26,7 @@ export interface Round {
   id: string;
   date: string;
   course: string;
+  holes?: "front9" | "back9" | "full";
   players: RoundPlayer[];
   skinsResults: SkinsResults;
 }
