@@ -1,0 +1,97 @@
+[
+  {
+    "id": "r1",
+    "date": "2026-02-10",
+    "course": "Monarch Beach Golf Links",
+    "players": [
+      {
+        "playerId": "p1",
+        "grossScore": 82,
+        "netScore": 74,
+        "holesData": [4, 5, 3, 5, 4, 4, 5, 4, 5, 4, 5, 3, 5, 4, 4, 6, 4, 3]
+      },
+      {
+        "playerId": "p2",
+        "grossScore": 89,
+        "netScore": 75,
+        "holesData": [5, 5, 4, 6, 5, 4, 5, 5, 5, 5, 5, 4, 5, 5, 5, 6, 5, 4]
+      },
+      {
+        "playerId": "p3",
+        "grossScore": 93,
+        "netScore": 75,
+        "holesData": [5, 6, 4, 6, 5, 5, 6, 5, 5, 5, 6, 4, 5, 5, 6, 6, 5, 4]
+      }
+    ],
+    "skinsResults": {
+      "pot": 15,
+      "winners": [
+        { "playerId": "p3", "amount": 10, "holes": [3, 18] },
+        { "playerId": "p2", "amount": 5, "holes": [12] }
+      ]
+    }
+  },
+  {
+    "id": "r2",
+    "date": "2026-02-28",
+    "course": "Talega Golf Club",
+    "players": [
+      {
+        "playerId": "p1",
+        "grossScore": 79,
+        "netScore": 71,
+        "holesData": [4, 4, 3, 5, 4, 4, 5, 4, 4, 4, 5, 3, 4, 4, 4, 5, 4, 3]
+      },
+      {
+        "playerId": "p2",
+        "grossScore": 91,
+        "netScore": 77,
+        "holesData": [5, 5, 4, 6, 5, 5, 6, 5, 5, 5, 6, 4, 5, 5, 5, 6, 5, 4]
+      },
+      {
+        "playerId": "p3",
+        "grossScore": 96,
+        "netScore": 78,
+        "holesData": [6, 6, 4, 6, 5, 5, 6, 5, 6, 5, 6, 4, 6, 5, 6, 6, 5, 4]
+      }
+    ],
+    "skinsResults": {
+      "pot": 15,
+      "winners": [
+        { "playerId": "p1", "amount": 15, "holes": [2, 10, 18] }
+      ]
+    }
+  },
+  {
+    "id": "r3",
+    "date": "2026-03-15",
+    "course": "San Clemente Municipal Golf Course",
+    "players": [
+      {
+        "playerId": "p1",
+        "grossScore": 85,
+        "netScore": 77,
+        "holesData": [5, 5, 4, 5, 4, 5, 5, 4, 5, 5, 5, 3, 5, 4, 5, 6, 4, 4]
+      },
+      {
+        "playerId": "p2",
+        "grossScore": 87,
+        "netScore": 73,
+        "holesData": [5, 5, 4, 5, 5, 4, 5, 5, 5, 5, 5, 3, 5, 5, 4, 5, 5, 4]
+      },
+      {
+        "playerId": "p3",
+        "grossScore": 94,
+        "netScore": 76,
+        "holesData": [5, 6, 4, 6, 5, 5, 6, 5, 6, 5, 5, 4, 6, 5, 5, 6, 5, 5]
+      }
+    ],
+    "skinsResults": {
+      "pot": 15,
+      "winners": [
+        { "playerId": "p2", "amount": 10, "holes": [6, 16] },
+        { "playerId": "p1", "amount": 5, "holes": [12] }
+      ]
+    }
+  }
+]

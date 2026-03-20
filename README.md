@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Golf Group Score Tracker
 
-## Getting Started
+A dark-themed golf score tracker with leaderboards, player comparisons, round history, and AI-powered scorecard parsing via Claude Vision.
 
-First, run the development server:
+## Features
+
+- **Season Leaderboard** — Sortable standings by gross avg, net avg, wins, money won
+- **Player vs Player** — H2H records, score differential trends, front/back 9 breakdowns
+- **Team vs Team** — Combined net comparisons across shared rounds
+- **Round History** — Expandable hole-by-hole scorecards with skins results
+- **Player Profiles** — Scoring trends, handicap tracking, H2H records
+- **AI Scorecard Parsing** — Upload a scorecard image and Claude Vision extracts all scores automatically
+
+## Tech Stack
+
+- Next.js 15 (App Router)
+- Tailwind CSS 4
+- Recharts
+- Anthropic Claude Vision API
+
+## Local Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Anthropic API key (needed for scorecard image parsing)
+echo "ANTHROPIC_API_KEY=your-key-here" > .env.local
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The app comes pre-loaded with 3 sample players and 3 sample rounds.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy to Vercel
 
-## Learn More
+### Option 1: Vercel CLI
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm i -g vercel
+vercel
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Option 2: GitHub Integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push this repo to GitHub
+2. Go to [vercel.com/new](https://vercel.com/new) and import the repo
+3. Vercel auto-detects Next.js — click Deploy
 
-## Deploy on Vercel
+### Set Environment Variable
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In the Vercel Dashboard:
+1. Go to your project → Settings → Environment Variables
+2. Add `ANTHROPIC_API_KEY` with your Anthropic API key
+3. Redeploy for the change to take effect
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Important: Data Persistence
+
+This app uses file-based JSON storage (`/data/players.json` and `/data/rounds.json`). On Vercel's serverless platform, the filesystem is **read-only at runtime** — so new rounds added via the `/add` page will not persist between deployments.
+
+For production use with persistent data, consider:
+- **Vercel KV** or **Vercel Postgres** (free tier available)
+- **Self-host** on a VPS where file writes persist
