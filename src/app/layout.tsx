@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Golf Tracker",
-  description: "Golf group score tracker and leaderboard",
+  title: "Nine Before Nine",
+  description: "Nine Before Nine — golf group score tracker and leaderboard",
 };
 
 export default function RootLayout({
