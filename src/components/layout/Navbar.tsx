@@ -16,16 +16,26 @@ export default function Navbar() {
   return (
     <nav className="border-b border-forest-lighter bg-forest-light/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-4">
             <Image
               src="/nine-before-nine.png"
               alt="Nine Before Nine"
-              width={120}
-              height={60}
+              width={72}
+              height={72}
               className="object-contain"
             />
+            <div className="flex flex-col">
+              <span className="text-xs text-gray-500 leading-none">Brought to you by</span>
+              <Image
+                src="/schneider-branch-logo.png"
+                alt="Schneider & Branch"
+                width={110}
+                height={22}
+                className="object-contain mt-0.5"
+              />
+            </div>
           </Link>
 
           {/* Nav links */}
@@ -50,18 +60,6 @@ export default function Navbar() {
               );
             })}
           </div>
-        </div>
-
-        {/* Brought to you by bar */}
-        <div className="flex items-center justify-center gap-2 py-1.5 border-t border-forest-lighter/50">
-          <span className="text-gray-500 text-xs">Brought to you by</span>
-          <Image
-            src="/schneider-branch-logo.png"
-            alt="Schneider & Branch"
-            width={120}
-            height={24}
-            className="object-contain opacity-80"
-          />
         </div>
       </div>
     </nav>
