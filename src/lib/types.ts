@@ -7,7 +7,7 @@ export interface Player {
 export interface RoundPlayer {
   playerId: string;
   grossScore: number;
-  netScore: number;
+  netScore?: number; // kept for legacy data, not displayed
   holesData: (number | null)[];
 }
 
@@ -34,23 +34,18 @@ export interface Round {
 export interface SeasonStanding {
   player: Player;
   roundsPlayed: number;
-  grossAvg: number;
-  netAvg: number;
-  grossWins: number;
-  netWins: number;
+  grossAvg9: number;
+  best9: number;
+  worst9: number;
+  wins: number;
   moneyWon: number;
-  bestGross: number;
-  bestNet: number;
 }
 
 export interface H2HRecord {
   opponent: Player;
-  grossWins: number;
-  grossLosses: number;
-  grossTies: number;
-  netWins: number;
-  netLosses: number;
-  netTies: number;
+  wins: number;
+  losses: number;
+  ties: number;
 }
 
 export interface ParsedScorecard {

@@ -4,20 +4,20 @@ import { useState } from "react";
 import Link from "next/link";
 import type { SeasonStanding } from "@/lib/types";
 
-type SortKey = "grossAvg" | "netAvg" | "grossWins" | "netWins" | "moneyWon";
+type SortKey = "grossAvg9" | "wins" | "moneyWon";
 
 export default function SeasonStandings({
   standings,
 }: {
   standings: SeasonStanding[];
 }) {
-  const [sortKey, setSortKey] = useState<SortKey>("netAvg");
+  const [sortKey, setSortKey] = useState<SortKey>("grossAvg9");
   const [sortAsc, setSortAsc] = useState(true);
 
   const sorted = [...standings].sort((a, b) => {
     const aVal = a[sortKey];
     const bVal = b[sortKey];
-    if (sortKey === "moneyWon" || sortKey === "grossWins" || sortKey === "netWins") {
+    if (sortKey === "moneyWon" || sortKey === "wins") {
       return sortAsc ? (bVal as number) - (aVal as number) : (aVal as number) - (bVal as number);
     }
     return sortAsc ? (aVal as number) - (bVal as number) : (bVal as number) - (aVal as number);
@@ -27,7 +27,7 @@ export default function SeasonStandings({
     if (sortKey === key) setSortAsc(!sortAsc);
     else {
       setSortKey(key);
-      setSortAsc(key === "grossAvg" || key === "netAvg");
+      setSortAsc(key === "grossAvg9");
     }
   };
 
@@ -53,10 +53,10 @@ export default function SeasonStandings({
             <th className="px-4 py-3 text-left w-8">#</th>
             <th className="px-4 py-3 text-left">Player</th>
             <th className="px-4 py-3 text-left">Rds</th>
-            <SortHeader label="Gross Avg" field="grossAvg" />
-            <SortHeader label="Net Avg" field="netAvg" />
-            <SortHeader label="Gross W" field="grossWins" />
-            <SortHeader label="Net W" field="netWins" />
+            <SortHeader label="Avg (9)" field="grossAvg9" />
+            <th className="px-4 py-3 text-left">Best 9</th>
+            <th className="px-4 py-3 text-left">Worst 9</th>
+            <SortHeader label="Wins" field="wins" />
             <SortHeader label="Money" field="moneyWon" />
           </tr>
         </thead>
@@ -80,16 +80,16 @@ export default function SeasonStandings({
               </td>
               <td className="px-4 py-4 text-gray-300">{s.roundsPlayed}</td>
               <td className="px-4 py-4 font-bold text-2xl text-white">
-                {s.grossAvg.toFixed(1)}
-              </td>
-              <td className="px-4 py-4 font-bold text-2xl text-gold">
-                {s.netAvg.toFixed(1)}
+                {s.grossAvg9.toFixed(1)}
               </td>
               <td className="px-4 py-4 font-bold text-lg text-green-light">
-                {s.grossWins}
+                {s.best9}
               </td>
-              <td className="px-4 py-4 font-bold text-lg text-green-light">
-                {s.netWins}
+              <td className="px-4 py-4 font-bold text-lg text-red-400">
+                {s.worst9}
+              </td>
+              <td className="px-4 py-4 font-bold text-lg text-gold">
+                {s.wins}
               </td>
               <td className="px-4 py-4 font-bold text-lg text-gold">
                 ${s.moneyWon}

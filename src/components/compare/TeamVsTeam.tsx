@@ -49,27 +49,27 @@ export default function TeamVsTeam({
       bestTeam2 = Infinity;
 
     const roundResults = sharedRounds.map((r) => {
-      const t1Net = team1Ids.reduce((sum, id) => {
+      const t1Score = team1Ids.reduce((sum, id) => {
         const rp = r.players.find((p) => p.playerId === id)!;
-        return sum + rp.netScore;
+        return sum + rp.grossScore;
       }, 0);
-      const t2Net = team2Ids.reduce((sum, id) => {
+      const t2Score = team2Ids.reduce((sum, id) => {
         const rp = r.players.find((p) => p.playerId === id)!;
-        return sum + rp.netScore;
+        return sum + rp.grossScore;
       }, 0);
 
-      if (t1Net < t2Net) team1Wins++;
-      else if (t2Net < t1Net) team2Wins++;
+      if (t1Score < t2Score) team1Wins++;
+      else if (t2Score < t1Score) team2Wins++;
       else ties++;
 
-      bestTeam1 = Math.min(bestTeam1, t1Net);
-      bestTeam2 = Math.min(bestTeam2, t2Net);
+      bestTeam1 = Math.min(bestTeam1, t1Score);
+      bestTeam2 = Math.min(bestTeam2, t2Score);
 
       return {
         date: r.date,
         course: r.course,
-        team1Net: t1Net,
-        team2Net: t2Net,
+        team1Score: t1Score,
+        team2Score: t2Score,
       };
     });
 
@@ -132,7 +132,7 @@ export default function TeamVsTeam({
           {/* W/L Record */}
           <div className="bg-forest-light border border-forest-lighter rounded-xl p-5">
             <h4 className="text-sm text-gray-400 uppercase mb-3">
-              Team Record (Combined Net)
+              Team Record (Combined Score)
             </h4>
             <div className="flex justify-between items-center">
               <div className="text-center">
@@ -180,8 +180,8 @@ export default function TeamVsTeam({
                 <tr className="border-b border-forest-lighter text-sm text-gray-400 uppercase">
                   <th className="px-4 py-3 text-left">Date</th>
                   <th className="px-4 py-3 text-left">Course</th>
-                  <th className="px-4 py-3 text-right">Team 1 Net</th>
-                  <th className="px-4 py-3 text-right">Team 2 Net</th>
+                  <th className="px-4 py-3 text-right">Team 1</th>
+                  <th className="px-4 py-3 text-right">Team 2</th>
                   <th className="px-4 py-3 text-center">Winner</th>
                 </tr>
               </thead>
@@ -197,24 +197,24 @@ export default function TeamVsTeam({
                     <td className="px-4 py-3 text-white">{r.course}</td>
                     <td
                       className={`px-4 py-3 text-right font-bold ${
-                        r.team1Net <= r.team2Net ? "text-gold" : "text-gray-400"
+                        r.team1Score <= r.team2Score ? "text-gold" : "text-gray-400"
                       }`}
                     >
-                      {r.team1Net}
+                      {r.team1Score}
                     </td>
                     <td
                       className={`px-4 py-3 text-right font-bold ${
-                        r.team2Net <= r.team1Net
+                        r.team2Score <= r.team1Score
                           ? "text-green-light"
                           : "text-gray-400"
                       }`}
                     >
-                      {r.team2Net}
+                      {r.team2Score}
                     </td>
                     <td className="px-4 py-3 text-center">
-                      {r.team1Net < r.team2Net
+                      {r.team1Score < r.team2Score
                         ? "Team 1"
-                        : r.team2Net < r.team1Net
+                        : r.team2Score < r.team1Score
                         ? "Team 2"
                         : "Tie"}
                     </td>

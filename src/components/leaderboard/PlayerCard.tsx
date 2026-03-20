@@ -21,15 +21,15 @@ export default function PlayerCard({ standing }: { standing: SeasonStanding }) {
             </div>
           </div>
           <div>
-            <div className="text-xs text-gray-400 uppercase">Best Gross</div>
+            <div className="text-xs text-gray-400 uppercase">Avg (9)</div>
             <div className="text-xl font-bold text-white">
-              {standing.bestGross}
+              {standing.grossAvg9.toFixed(1)}
             </div>
           </div>
           <div>
-            <div className="text-xs text-gray-400 uppercase">Best Net</div>
-            <div className="text-xl font-bold text-gold">
-              {standing.bestNet}
+            <div className="text-xs text-gray-400 uppercase">Best 9</div>
+            <div className="text-xl font-bold text-green-light">
+              {standing.best9}
             </div>
           </div>
         </div>

@@ -8,6 +8,30 @@ function isNineHoleRound(round: Round): boolean {
   return round.holes === "front9" || round.holes === "back9";
 }
 
+/**
+ * Get all 9-hole scores for a player.
+ * For 9-hole rounds: use the gross score directly.
+ * For 18-hole rounds (Option B): split into front 9 and back 9 scores.
+ */
+function getAll9HoleScores(playerId: string, rounds: Round[]): number[] {
+  const scores: number[] = [];
+  for (const round of rounds) {
+    const rp = round.players.find((p) => p.playerId === playerId);
+    if (!rp) continue;
+
+    if (isNineHoleRound(round)) {
+      scores.push(rp.grossScore);
+    } else {
+      // Full 18: split into two 9-hole scores
+      const front9 = sumHoles(rp.holesData.slice(0, 9));
+      const back9 = sumHoles(rp.holesData.slice(9));
+      if (front9 > 0) scores.push(front9);
+      if (back9 > 0) scores.push(back9);
+    }
+  }
+  return scores;
+}
+
 export function computeSeasonStandings(
   players: Player[],
   rounds: Round[]
@@ -17,43 +41,16 @@ export function computeSeasonStandings(
       r.players.some((p) => p.playerId === player.id)
     );
 
-    // Separate 9-hole and 18-hole rounds for averaging
-    const fullRounds = playerRounds.filter((r) => !isNineHoleRound(r));
-    const nineRounds = playerRounds.filter((r) => isNineHoleRound(r));
+    const all9Scores = getAll9HoleScores(player.id, rounds);
 
-    const fullGross = fullRounds.map(
-      (r) => r.players.find((p) => p.playerId === player.id)!.grossScore
-    );
-    const fullNet = fullRounds.map(
-      (r) => r.players.find((p) => p.playerId === player.id)!.netScore
-    );
-    const nineGross = nineRounds.map(
-      (r) => r.players.find((p) => p.playerId === player.id)!.grossScore
-    );
-    const nineNet = nineRounds.map(
-      (r) => r.players.find((p) => p.playerId === player.id)!.netScore
-    );
-
-    // Normalize 9-hole scores to 18-hole equivalents for averaging
-    const allGross = [
-      ...fullGross,
-      ...nineGross.map((s) => s * 2),
-    ];
-    const allNet = [
-      ...fullNet,
-      ...nineNet.map((s) => s * 2),
-    ];
-
-    let grossWins = 0;
-    let netWins = 0;
+    // Wins: lowest gross in the round (comparing apples to apples per round)
+    let wins = 0;
     let moneyWon = 0;
 
     for (const round of playerRounds) {
       const minGross = Math.min(...round.players.map((p) => p.grossScore));
-      const minNet = Math.min(...round.players.map((p) => p.netScore));
       const rp = round.players.find((p) => p.playerId === player.id)!;
-      if (rp.grossScore === minGross) grossWins++;
-      if (rp.netScore === minNet) netWins++;
+      if (rp.grossScore === minGross) wins++;
 
       const skinWinner = round.skinsResults.winners.find(
         (w) => w.playerId === player.id
@@ -64,23 +61,16 @@ export function computeSeasonStandings(
     return {
       player,
       roundsPlayed: playerRounds.length,
-      grossAvg:
-        allGross.length > 0
+      grossAvg9:
+        all9Scores.length > 0
           ? Math.round(
-              (allGross.reduce((a, b) => a + b, 0) / allGross.length) * 10
+              (all9Scores.reduce((a, b) => a + b, 0) / all9Scores.length) * 10
             ) / 10
           : 0,
-      netAvg:
-        allNet.length > 0
-          ? Math.round(
-              (allNet.reduce((a, b) => a + b, 0) / allNet.length) * 10
-            ) / 10
-          : 0,
-      grossWins,
-      netWins,
+      best9: all9Scores.length > 0 ? Math.min(...all9Scores) : 0,
+      worst9: all9Scores.length > 0 ? Math.max(...all9Scores) : 0,
+      wins,
       moneyWon,
-      bestGross: allGross.length > 0 ? Math.min(...allGross) : 0,
-      bestNet: allNet.length > 0 ? Math.min(...allNet) : 0,
     };
   });
 }
@@ -99,34 +89,24 @@ export function computeH2H(
         r.players.some((p) => p.playerId === opponent.id)
     );
 
-    let grossWins = 0,
-      grossLosses = 0,
-      grossTies = 0;
-    let netWins = 0,
-      netLosses = 0,
-      netTies = 0;
+    let wins = 0,
+      losses = 0,
+      ties = 0;
 
     for (const round of sharedRounds) {
       const me = round.players.find((p) => p.playerId === playerId)!;
       const them = round.players.find((p) => p.playerId === opponent.id)!;
 
-      if (me.grossScore < them.grossScore) grossWins++;
-      else if (me.grossScore > them.grossScore) grossLosses++;
-      else grossTies++;
-
-      if (me.netScore < them.netScore) netWins++;
-      else if (me.netScore > them.netScore) netLosses++;
-      else netTies++;
+      if (me.grossScore < them.grossScore) wins++;
+      else if (me.grossScore > them.grossScore) losses++;
+      else ties++;
     }
 
     return {
       opponent,
-      grossWins,
-      grossLosses,
-      grossTies,
-      netWins,
-      netLosses,
-      netTies,
+      wins,
+      losses,
+      ties,
     };
   });
 }
@@ -134,7 +114,7 @@ export function computeH2H(
 export function getPlayerRoundScores(
   playerId: string,
   rounds: Round[]
-): { date: string; course: string; gross: number; net: number; front9: number; back9: number; nineHole: boolean }[] {
+): { date: string; course: string; gross: number; front9: number; back9: number; nineHole: boolean }[] {
   return rounds
     .filter((r) => r.players.some((p) => p.playerId === playerId))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
@@ -146,7 +126,6 @@ export function getPlayerRoundScores(
         date: r.date,
         course: r.course,
         gross: rp.grossScore,
-        net: rp.netScore,
         front9,
         back9,
         nineHole: isNineHoleRound(r),
@@ -180,10 +159,7 @@ export function getCompareData(
       course: r.course,
       p1Gross: p1.grossScore,
       p2Gross: p2.grossScore,
-      p1Net: p1.netScore,
-      p2Net: p2.netScore,
       grossDiff: p1.grossScore - p2.grossScore,
-      netDiff: p1.netScore - p2.netScore,
       p1Front,
       p1Back,
       p2Front,

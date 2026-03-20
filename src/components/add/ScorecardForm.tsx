@@ -134,11 +134,9 @@ export default function ScorecardForm({
           if (!playerId) return null;
           const scores = row.scores.map((s) => s ?? 0);
           const grossScore = scores.reduce((a, b) => a + b, 0);
-          const netScore = grossScore - row.handicap;
           return {
             playerId,
             grossScore,
-            netScore,
             holesData: scores,
           };
         })

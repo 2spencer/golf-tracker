@@ -27,21 +27,13 @@ export default async function PlayerPage({
   const grossScores = playerRounds.map(
     (r) => r.players.find((p) => p.playerId === id)!.grossScore
   );
-  const netScores = playerRounds.map(
-    (r) => r.players.find((p) => p.playerId === id)!.netScore
-  );
 
   const grossAvg =
     grossScores.length > 0
       ? (grossScores.reduce((a, b) => a + b, 0) / grossScores.length).toFixed(1)
       : "N/A";
-  const netAvg =
-    netScores.length > 0
-      ? (netScores.reduce((a, b) => a + b, 0) / netScores.length).toFixed(1)
-      : "N/A";
   const bestGross = grossScores.length > 0 ? Math.min(...grossScores) : "N/A";
   const worstGross = grossScores.length > 0 ? Math.max(...grossScores) : "N/A";
-  const bestNet = netScores.length > 0 ? Math.min(...netScores) : "N/A";
 
   // Favorite course
   const courseCount: Record<string, number> = {};
@@ -81,13 +73,11 @@ export default async function PlayerPage({
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         {[
-          { label: "Gross Avg", value: grossAvg, color: "text-white" },
-          { label: "Net Avg", value: netAvg, color: "text-gold" },
-          { label: "Best Gross", value: bestGross, color: "text-green-light" },
-          { label: "Worst Gross", value: worstGross, color: "text-red-400" },
-          { label: "Best Net", value: bestNet, color: "text-gold" },
+          { label: "Scoring Avg", value: grossAvg, color: "text-white" },
+          { label: "Best Round", value: bestGross, color: "text-green-light" },
+          { label: "Worst Round", value: worstGross, color: "text-red-400" },
           { label: "Money Won", value: `$${moneyWon}`, color: "text-gold" },
           { label: "Fav Course", value: favoriteCourse, color: "text-white", small: true },
         ].map((stat) => (
@@ -132,30 +122,14 @@ export default async function PlayerPage({
                   HCP {record.opponent.handicap}
                 </span>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <div className="text-xs text-gray-400 uppercase mb-1">
-                    Gross
-                  </div>
-                  <div className="text-lg font-bold">
-                    <span className="text-green-light">{record.grossWins}W</span>
-                    <span className="text-gray-500"> - </span>
-                    <span className="text-red-400">{record.grossLosses}L</span>
-                    {record.grossTies > 0 && (
-                      <span className="text-gray-400"> - {record.grossTies}T</span>
-                    )}
-                  </div>
-                </div>
-                <div>
-                  <div className="text-xs text-gray-400 uppercase mb-1">Net</div>
-                  <div className="text-lg font-bold">
-                    <span className="text-green-light">{record.netWins}W</span>
-                    <span className="text-gray-500"> - </span>
-                    <span className="text-red-400">{record.netLosses}L</span>
-                    {record.netTies > 0 && (
-                      <span className="text-gray-400"> - {record.netTies}T</span>
-                    )}
-                  </div>
+              <div>
+                <div className="text-lg font-bold">
+                  <span className="text-green-light">{record.wins}W</span>
+                  <span className="text-gray-500"> - </span>
+                  <span className="text-red-400">{record.losses}L</span>
+                  {record.ties > 0 && (
+                    <span className="text-gray-400"> - {record.ties}T</span>
+                  )}
                 </div>
               </div>
             </div>

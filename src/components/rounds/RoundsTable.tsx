@@ -21,12 +21,6 @@ export default function RoundsTable({
     return winner ? getPlayerName(winner.playerId) : "";
   };
 
-  const getNetWinner = (round: Round) => {
-    const min = Math.min(...round.players.map((p) => p.netScore));
-    const winner = round.players.find((p) => p.netScore === min);
-    return winner ? getPlayerName(winner.playerId) : "";
-  };
-
   const isNineHole = (round: Round) =>
     round.holes === "front9" || round.holes === "back9";
 
@@ -71,15 +65,9 @@ export default function RoundsTable({
                 {round.players.length} players
               </span>
               <span className="text-sm">
-                <span className="text-gray-400">Gross: </span>
+                <span className="text-gray-400">Winner: </span>
                 <span className="text-gold font-bold">
                   {getGrossWinner(round)}
-                </span>
-              </span>
-              <span className="text-sm">
-                <span className="text-gray-400">Net: </span>
-                <span className="text-green-light font-bold">
-                  {getNetWinner(round)}
                 </span>
               </span>
               <span className="text-sm">
@@ -122,10 +110,7 @@ export default function RoundsTable({
                           </>
                         )}
                         <th className="px-2 py-2 text-center border-l-2 border-forest-lighter font-bold">
-                          Gross
-                        </th>
-                        <th className="px-2 py-2 text-center text-gold font-bold">
-                          Net
+                          Total
                         </th>
                       </tr>
                     </thead>
@@ -180,9 +165,6 @@ export default function RoundsTable({
                             )}
                             <td className="px-2 py-2 text-center border-l-2 border-forest-lighter font-bold text-white text-lg">
                               {rp.grossScore}
-                            </td>
-                            <td className="px-2 py-2 text-center font-bold text-gold text-lg">
-                              {rp.netScore}
                             </td>
                           </tr>
                         );

@@ -35,17 +35,13 @@ export default function PlayerVsPlayer({
   }, [p1Id, p2Id, rounds]);
 
   const h2h = useMemo(() => {
-    let grossP1 = 0, grossP2 = 0, grossTie = 0;
-    let netP1 = 0, netP2 = 0, netTie = 0;
+    let p1Wins = 0, p2Wins = 0, ties = 0;
     for (const d of data) {
-      if (d.p1Gross < d.p2Gross) grossP1++;
-      else if (d.p1Gross > d.p2Gross) grossP2++;
-      else grossTie++;
-      if (d.p1Net < d.p2Net) netP1++;
-      else if (d.p1Net > d.p2Net) netP2++;
-      else netTie++;
+      if (d.p1Gross < d.p2Gross) p1Wins++;
+      else if (d.p1Gross > d.p2Gross) p2Wins++;
+      else ties++;
     }
-    return { grossP1, grossP2, grossTie, netP1, netP2, netTie };
+    return { p1Wins, p2Wins, ties };
   }, [data]);
 
   const front9Back9 = useMemo(() => {
@@ -93,49 +89,25 @@ export default function PlayerVsPlayer({
       {p1Id !== p2Id && data.length > 0 && (
         <>
           {/* H2H Record */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-forest-light border border-forest-lighter rounded-xl p-5">
-              <h4 className="text-sm text-gray-400 uppercase mb-3">
-                Gross Record
-              </h4>
-              <div className="flex justify-between items-center">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gold">
-                    {h2h.grossP1}
-                  </div>
-                  <div className="text-sm text-gray-400">{p1?.name}</div>
+          <div className="bg-forest-light border border-forest-lighter rounded-xl p-5">
+            <h4 className="text-sm text-gray-400 uppercase mb-3">
+              Head-to-Head Record
+            </h4>
+            <div className="flex justify-between items-center">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-gold">
+                  {h2h.p1Wins}
                 </div>
-                <div className="text-center">
-                  <div className="text-xl text-gray-500">{h2h.grossTie} ties</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gold">
-                    {h2h.grossP2}
-                  </div>
-                  <div className="text-sm text-gray-400">{p2?.name}</div>
-                </div>
+                <div className="text-sm text-gray-400">{p1?.name}</div>
               </div>
-            </div>
-            <div className="bg-forest-light border border-forest-lighter rounded-xl p-5">
-              <h4 className="text-sm text-gray-400 uppercase mb-3">
-                Net Record
-              </h4>
-              <div className="flex justify-between items-center">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-light">
-                    {h2h.netP1}
-                  </div>
-                  <div className="text-sm text-gray-400">{p1?.name}</div>
+              <div className="text-center">
+                <div className="text-xl text-gray-500">{h2h.ties} ties</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-gold">
+                  {h2h.p2Wins}
                 </div>
-                <div className="text-center">
-                  <div className="text-xl text-gray-500">{h2h.netTie} ties</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-light">
-                    {h2h.netP2}
-                  </div>
-                  <div className="text-sm text-gray-400">{p2?.name}</div>
-                </div>
+                <div className="text-sm text-gray-400">{p2?.name}</div>
               </div>
             </div>
           </div>
@@ -143,7 +115,7 @@ export default function PlayerVsPlayer({
           {/* Differential Trend */}
           <div className="bg-forest-light border border-forest-lighter rounded-xl p-5">
             <h4 className="text-sm text-gray-400 uppercase mb-4">
-              Score Differential Trend (Gross)
+              Score Differential Trend
             </h4>
             <ResponsiveContainer width="100%" height={250}>
               <LineChart
