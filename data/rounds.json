@@ -1,6 +1,6 @@
 [
   {
-    "id": "r4",
+    "id": "r1",
     "date": "2026-03-20",
     "course": "San Clemente Municipal Golf Course",
     "holes": "back9",
@@ -30,9 +30,159 @@
         "holesData": [null, null, null, null, null, null, null, null, null, 5, 6, 6, 6, 5, 4, 7, 5, 5]
       }
     ],
-    "skinsResults": {
-      "pot": 0,
-      "winners": []
-    }
+    "skinsResults": { "pot": 0, "winners": [] }
+  },
+  {
+    "id": "r2",
+    "date": "2026-03-06",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 41,
+        "netScore": 31,
+        "holesData": [null, null, null, null, null, null, null, null, null, 4, 6, 5, 4, 5, 4, 4, 5, 4]
+      },
+      {
+        "playerId": "p8",
+        "grossScore": 57,
+        "netScore": 39,
+        "holesData": [null, null, null, null, null, null, null, null, null, 5, 8, 10, 5, 6, 6, 6, 6, 5]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 50,
+        "netScore": 35,
+        "holesData": [null, null, null, null, null, null, null, null, null, 5, 5, 7, 5, 6, 6, 6, 5, 5]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 56,
+        "netScore": 42,
+        "holesData": [null, null, null, null, null, null, null, null, null, 7, 6, 7, 4, 5, 4, 7, 8, 8]
+      }
+    ],
+    "skinsResults": { "pot": 0, "winners": [] }
+  },
+  {
+    "id": "r3",
+    "date": "2026-02-24",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 46,
+        "netScore": 36,
+        "holesData": [null, null, null, null, null, null, null, null, null, 4, 7, 6, 5, 4, 3, 6, 7, 4]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 52,
+        "netScore": 36,
+        "holesData": [null, null, null, null, null, null, null, null, null, 5, 8, 7, 4, 7, 3, 6, 6, 6]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 47,
+        "netScore": 31,
+        "holesData": [null, null, null, null, null, null, null, null, null, 6, 6, 5, 3, 5, 5, 3, 6, 8]
+      },
+      {
+        "playerId": "p7",
+        "grossScore": 51,
+        "netScore": 39,
+        "holesData": [null, null, null, null, null, null, null, null, null, 7, 9, 5, 4, 5, 4, 5, 6, 6]
+      }
+    ],
+    "skinsResults": { "pot": 0, "winners": [] }
+  },
+  {
+    "id": "r4",
+    "date": "2026-02-10",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 47,
+        "netScore": 36,
+        "holesData": [null, null, null, null, null, null, null, null, null, 5, 6, 6, 5, 5, 5, 5, 5, 5]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 53,
+        "netScore": 37,
+        "holesData": [null, null, null, null, null, null, null, null, null, 5, 7, 6, 4, 8, 4, 6, 6, 7]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 52,
+        "netScore": 35,
+        "holesData": [null, null, null, null, null, null, null, null, null, 5, 7, 6, 5, 5, 5, 8, 5, 6]
+      }
+    ],
+    "skinsResults": { "pot": 0, "winners": [] }
+  },
+  {
+    "id": "r5",
+    "date": "2026-02-06",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 49,
+        "netScore": 39,
+        "holesData": [null, null, null, null, null, null, null, null, null, 5, 6, 6, 4, 7, 7, 5, 6, 6]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 61,
+        "netScore": 46,
+        "holesData": [null, null, null, null, null, null, null, null, null, 6, 7, 7, 7, 6, 6, 8, 7, 7]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 55,
+        "netScore": 38,
+        "holesData": [null, null, null, null, null, null, null, null, null, 7, 8, 9, 5, 6, 5, 5, 5, 5]
+      }
+    ],
+    "skinsResults": { "pot": 0, "winners": [] }
+  },
+  {
+    "id": "r6",
+    "date": "2026-01-09",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 50,
+        "netScore": 40,
+        "holesData": [null, null, null, null, null, null, null, null, null, 6, 6, 5, 4, 7, 7, 5, 4, 6]
+      },
+      {
+        "playerId": "p7",
+        "grossScore": 53,
+        "netScore": 45,
+        "holesData": [null, null, null, null, null, null, null, null, null, 7, 10, 6, 3, 6, 4, 6, 5, 6]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 52,
+        "netScore": 34,
+        "holesData": [null, null, null, null, null, null, null, null, null, 7, 7, 8, 5, 4, 5, 4, 5, 7]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 59,
+        "netScore": 45,
+        "holesData": [null, null, null, null, null, null, null, null, null, 7, 5, 10, 4, 9, 5, 6, 5, 8]
+      }
+    ],
+    "skinsResults": { "pot": 0, "winners": [] }
   }
 ]
