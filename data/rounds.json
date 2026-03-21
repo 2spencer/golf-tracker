@@ -1,159 +1,2016 @@
 [
   {
     "id": "r1",
-    "date": "2026-03-20",
+    "date": "2025-06-24",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 61,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          6,
+          7,
+          8,
+          6,
+          5,
+          7,
+          8,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r2",
+    "date": "2025-07-01",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 57,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          8,
+          6,
+          6,
+          6,
+          7,
+          6,
+          5,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r3",
+    "date": "2025-07-16",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 64,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          9,
+          10,
+          7,
+          7,
+          3,
+          6,
+          6,
+          8
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 56,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          8,
+          6,
+          6,
+          7,
+          6,
+          6,
+          6,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r4",
+    "date": "2025-07-18",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 60,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          10,
+          10,
+          5,
+          6,
+          6,
+          8,
+          6,
+          4
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 50,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
+          6,
+          7,
+          5,
+          4,
+          4,
+          7,
+          6,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r5",
+    "date": "2025-07-20",
+    "course": "The Ranch at Laguna Beach",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 52,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          6,
+          6,
+          5,
+          6,
+          5,
+          6,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r6",
+    "date": "2025-07-22",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 74,
+        "holesData": [
+          6,
+          5,
+          5,
+          6,
+          6,
+          5,
+          10,
+          7,
+          6,
+          5,
+          6,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 79,
+        "holesData": [
+          6,
+          6,
+          9,
+          7,
+          6,
+          6,
+          5,
+          5,
+          6,
+          6,
+          10,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r7",
+    "date": "2025-07-25",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 54,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          7,
+          8,
+          5,
+          5,
+          4,
+          7,
+          6,
+          7
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 50,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          7,
+          5,
+          6,
+          5,
+          4,
+          6,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r8",
+    "date": "2025-07-27",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 55,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          3,
+          6,
+          6,
+          8,
+          6,
+          8,
+          5,
+          8
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r9",
+    "date": "2025-08-03",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 59,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          9,
+          5,
+          8,
+          6,
+          8,
+          6,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r10",
+    "date": "2025-08-04",
+    "course": "Monarch Beach Golf Links",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 58,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          7,
+          5,
+          6,
+          8,
+          7,
+          7,
+          5,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r11",
+    "date": "2025-08-13",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 53,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          9,
+          7,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r12",
+    "date": "2025-08-17",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 54,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          5,
+          6,
+          5,
+          8,
+          8,
+          6,
+          6,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r13",
+    "date": "2025-08-20",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 52,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          8,
+          5,
+          5,
+          7,
+          5,
+          5,
+          6
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 46,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          5,
+          6,
+          5,
+          5,
+          4,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r14",
+    "date": "2025-08-26",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 57,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          9,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          8
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 58,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          6,
+          8,
+          4,
+          7,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r15",
+    "date": "2025-09-02",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 47,
+        "holesData": [
+          5,
+          3,
+          6,
+          3,
+          6,
+          5,
+          6,
+          9,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r16",
+    "date": "2025-09-04",
     "course": "San Clemente Municipal Golf Course",
     "holes": "back9",
     "players": [
       {
         "playerId": "p4",
         "grossScore": 47,
-        "netScore": 41,
-        "holesData": [null, null, null, null, null, null, null, null, null, 5, 5, 8, 3, 5, 4, 7, 5, 5]
-      },
-      {
-        "playerId": "p5",
-        "grossScore": 52,
-        "netScore": 38,
-        "holesData": [null, null, null, null, null, null, null, null, null, 6, 6, 8, 6, 4, 6, 5, 5, 6]
-      },
-      {
-        "playerId": "p6",
-        "grossScore": 49,
-        "netScore": 34,
-        "holesData": [null, null, null, null, null, null, null, null, null, 6, 7, 5, 4, 9, 4, 4, 7, 3]
-      },
-      {
-        "playerId": "p7",
-        "grossScore": 49,
-        "netScore": 37,
-        "holesData": [null, null, null, null, null, null, null, null, null, 5, 6, 6, 6, 5, 4, 7, 5, 5]
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          3,
+          5,
+          5,
+          9,
+          5,
+          6,
+          5,
+          4
+        ]
       }
     ],
-    "skinsResults": { "pot": 0, "winners": [] }
+    "skinsAmount": 5
   },
   {
-    "id": "r2",
-    "date": "2026-03-06",
-    "course": "San Clemente Municipal Golf Course",
+    "id": "r17",
+    "date": "2025-09-06",
+    "course": "Catalina Island Golf Course",
     "holes": "back9",
     "players": [
       {
         "playerId": "p4",
         "grossScore": 41,
-        "netScore": 31,
-        "holesData": [null, null, null, null, null, null, null, null, null, 4, 6, 5, 4, 5, 4, 4, 5, 4]
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          4,
+          4,
+          5,
+          4,
+          3,
+          4,
+          6,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r18",
+    "date": "2025-09-08",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 45,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          5,
+          4,
+          5,
+          3,
+          8,
+          3,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r19",
+    "date": "2025-09-09",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 55,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          5,
+          10,
+          5,
+          5,
+          5,
+          5,
+          6,
+          7
+        ]
       },
       {
-        "playerId": "p8",
-        "grossScore": 57,
-        "netScore": 39,
-        "holesData": [null, null, null, null, null, null, null, null, null, 5, 8, 10, 5, 6, 6, 6, 6, 5]
-      },
+        "playerId": "p4",
+        "grossScore": 49,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          7,
+          7,
+          4,
+          7,
+          4,
+          5,
+          5,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r20",
+    "date": "2025-09-12",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
       {
         "playerId": "p6",
         "grossScore": 50,
-        "netScore": 35,
-        "holesData": [null, null, null, null, null, null, null, null, null, 5, 5, 7, 5, 6, 6, 6, 5, 5]
-      },
-      {
-        "playerId": "p5",
-        "grossScore": 56,
-        "netScore": 42,
-        "holesData": [null, null, null, null, null, null, null, null, null, 7, 6, 7, 4, 5, 4, 7, 8, 8]
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          10,
+          5,
+          4,
+          4,
+          4,
+          5,
+          6,
+          7
+        ]
       }
     ],
-    "skinsResults": { "pot": 0, "winners": [] }
+    "skinsAmount": 5
   },
   {
-    "id": "r3",
-    "date": "2026-02-24",
+    "id": "r21",
+    "date": "2025-09-16",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 52,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          7,
+          7,
+          4,
+          9,
+          4,
+          5,
+          5,
+          5
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 44,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          5,
+          5,
+          7,
+          4,
+          3,
+          5,
+          5,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r22",
+    "date": "2025-09-23",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 51,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          5,
+          6,
+          5,
+          7,
+          4,
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 47,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
+          5,
+          6,
+          5,
+          4,
+          7,
+          5,
+          6,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r23",
+    "date": "2025-09-24",
+    "course": "The Ranch at Laguna Beach",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 41,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          4,
+          4,
+          4,
+          5,
+          3,
+          6,
+          4,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r24",
+    "date": "2025-09-26",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 112,
+        "holesData": [
+          7,
+          3,
+          4,
+          7,
+          9,
+          8,
+          7,
+          9,
+          4,
+          5,
+          7,
+          9,
+          7,
+          7,
+          4,
+          5,
+          5,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r25",
+    "date": "2025-09-26",
+    "course": "The Legends Golf Club",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 96,
+        "holesData": [
+          5,
+          7,
+          5,
+          5,
+          7,
+          4,
+          6,
+          6,
+          4,
+          5,
+          3,
+          7,
+          6,
+          5,
+          4,
+          5,
+          6,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r26",
+    "date": "2025-09-28",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 114,
+        "holesData": [
+          7,
+          5,
+          9,
+          6,
+          9,
+          5,
+          7,
+          5,
+          5,
+          5,
+          8,
+          7,
+          5,
+          5,
+          8,
+          7,
+          6,
+          5
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 95,
+        "holesData": [
+          6,
+          4,
+          5,
+          4,
+          5,
+          6,
+          7,
+          6,
+          5,
+          4,
+          5,
+          7,
+          5,
+          7,
+          5,
+          5,
+          5,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r27",
+    "date": "2025-10-01",
     "course": "San Clemente Municipal Golf Course",
     "holes": "back9",
     "players": [
       {
         "playerId": "p4",
         "grossScore": 46,
-        "netScore": 36,
-        "holesData": [null, null, null, null, null, null, null, null, null, 4, 7, 6, 5, 4, 3, 6, 7, 4]
-      },
-      {
-        "playerId": "p6",
-        "grossScore": 52,
-        "netScore": 36,
-        "holesData": [null, null, null, null, null, null, null, null, null, 5, 8, 7, 4, 7, 3, 6, 6, 6]
-      },
-      {
-        "playerId": "p5",
-        "grossScore": 47,
-        "netScore": 31,
-        "holesData": [null, null, null, null, null, null, null, null, null, 6, 6, 5, 3, 5, 5, 3, 6, 8]
-      },
-      {
-        "playerId": "p7",
-        "grossScore": 51,
-        "netScore": 39,
-        "holesData": [null, null, null, null, null, null, null, null, null, 7, 9, 5, 4, 5, 4, 5, 6, 6]
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
+          6,
+          7,
+          6,
+          6,
+          5,
+          6,
+          3,
+          3
+        ]
       }
     ],
-    "skinsResults": { "pot": 0, "winners": [] }
+    "skinsAmount": 5
   },
   {
-    "id": "r4",
-    "date": "2026-02-10",
+    "id": "r28",
+    "date": "2025-10-04",
+    "course": "Indian Ridge Country Club",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 100,
+        "holesData": [
+          4,
+          5,
+          7,
+          4,
+          6,
+          6,
+          3,
+          6,
+          6,
+          6,
+          5,
+          7,
+          6,
+          7,
+          7,
+          5,
+          4,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r29",
+    "date": "2025-10-07",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 54,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          6,
+          9,
+          5,
+          4,
+          3,
+          7,
+          6,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r30",
+    "date": "2025-10-11",
+    "course": "Diadema Golf Club",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 49,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          4,
+          5,
+          7,
+          6,
+          4,
+          8,
+          5,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r31",
+    "date": "2025-10-17",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 51,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          6,
+          6,
+          5,
+          4,
+          5,
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 49,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          5,
+          8,
+          5,
+          5,
+          4,
+          6,
+          5,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r32",
+    "date": "2025-10-21",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 54,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          7,
+          5,
+          6,
+          5,
+          7,
+          6,
+          6
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 53,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          5,
+          5,
+          6,
+          7,
+          6,
+          7,
+          6,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r33",
+    "date": "2025-10-25",
+    "course": "Costa Mesa Country Club",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 44,
+        "holesData": [
+          5,
+          5,
+          6,
+          5,
+          4,
+          5,
+          4,
+          5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r34",
+    "date": "2025-10-29",
+    "course": "Shorecliffs Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 52,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          7,
+          5,
+          5,
+          3,
+          8,
+          6,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r35",
+    "date": "2025-10-31",
     "course": "San Clemente Municipal Golf Course",
     "holes": "back9",
     "players": [
       {
         "playerId": "p4",
-        "grossScore": 47,
-        "netScore": 36,
-        "holesData": [null, null, null, null, null, null, null, null, null, 5, 6, 6, 5, 5, 5, 5, 5, 5]
-      },
-      {
-        "playerId": "p6",
-        "grossScore": 53,
-        "netScore": 37,
-        "holesData": [null, null, null, null, null, null, null, null, null, 5, 7, 6, 4, 8, 4, 6, 6, 7]
-      },
-      {
-        "playerId": "p5",
-        "grossScore": 52,
-        "netScore": 35,
-        "holesData": [null, null, null, null, null, null, null, null, null, 5, 7, 6, 5, 5, 5, 8, 5, 6]
+        "grossScore": 48,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          6,
+          5,
+          4,
+          5,
+          4,
+          5,
+          6,
+          6
+        ]
       }
     ],
-    "skinsResults": { "pot": 0, "winners": [] }
+    "skinsAmount": 5
   },
   {
-    "id": "r5",
-    "date": "2026-02-06",
+    "id": "r36",
+    "date": "2025-11-04",
     "course": "San Clemente Municipal Golf Course",
     "holes": "back9",
     "players": [
       {
         "playerId": "p4",
         "grossScore": 49,
-        "netScore": 39,
-        "holesData": [null, null, null, null, null, null, null, null, null, 5, 6, 6, 4, 7, 7, 5, 6, 6]
-      },
-      {
-        "playerId": "p6",
-        "grossScore": 61,
-        "netScore": 46,
-        "holesData": [null, null, null, null, null, null, null, null, null, 6, 7, 7, 7, 6, 6, 8, 7, 7]
-      },
-      {
-        "playerId": "p5",
-        "grossScore": 55,
-        "netScore": 38,
-        "holesData": [null, null, null, null, null, null, null, null, null, 7, 8, 9, 5, 6, 5, 5, 5, 5]
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          4,
+          5,
+          5,
+          8,
+          6,
+          7,
+          5,
+          4
+        ]
       }
     ],
-    "skinsResults": { "pot": 0, "winners": [] }
+    "skinsAmount": 5
   },
   {
-    "id": "r6",
+    "id": "r37",
+    "date": "2025-11-11",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 48,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          7,
+          5,
+          4,
+          6,
+          6,
+          5,
+          5,
+          4
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 40,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          4,
+          5,
+          3,
+          6,
+          4,
+          4,
+          3,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r38",
+    "date": "2025-11-14",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 49,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          7,
+          6,
+          4,
+          6,
+          6,
+          4,
+          5,
+          5
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 48,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          6,
+          4,
+          5,
+          4,
+          6,
+          5,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r39",
+    "date": "2025-11-19",
+    "course": "Shorecliffs Golf Course",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 110,
+        "holesData": [
+          4,
+          9,
+          9,
+          6,
+          9,
+          6,
+          6,
+          5,
+          6,
+          4,
+          7,
+          5,
+          5,
+          4,
+          6,
+          5,
+          6,
+          8
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r40",
+    "date": "2025-11-19",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 52,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          4,
+          4,
+          4,
+          9,
+          8,
+          8,
+          6,
+          3
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r41",
+    "date": "2025-11-23",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 59,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          8,
+          5,
+          7,
+          6,
+          7,
+          6,
+          9,
+          4
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 45,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          3,
+          4,
+          5,
+          6,
+          5,
+          6,
+          6,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r42",
+    "date": "2025-11-26",
+    "course": "Monarch Beach Golf Links",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 77,
+        "holesData": [
+          4,
+          5,
+          3,
+          3,
+          4,
+          4,
+          5,
+          4,
+          4,
+          6,
+          5,
+          6,
+          2,
+          5,
+          4,
+          5,
+          4,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r43",
+    "date": "2025-11-28",
+    "course": "Riverwalk Golf Club",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 114,
+        "holesData": [
+          8,
+          5,
+          5,
+          8,
+          6,
+          7,
+          4,
+          6,
+          6,
+          8,
+          7,
+          8,
+          8,
+          7,
+          6,
+          5,
+          5,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r44",
+    "date": "2025-12-02",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 56,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          6,
+          7,
+          5,
+          8,
+          4,
+          6,
+          6,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r45",
+    "date": "2025-12-09",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 62,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          8,
+          6,
+          5,
+          9,
+          8,
+          9,
+          5,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r46",
+    "date": "2025-12-17",
+    "course": "Boot Ranch Golf Course",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 114,
+        "holesData": [
+          8,
+          4,
+          7,
+          6,
+          5,
+          6,
+          5,
+          8,
+          3,
+          5,
+          10,
+          7,
+          7,
+          8,
+          6,
+          6,
+          6,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r47",
+    "date": "2025-12-19",
+    "course": "Boot Ranch Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 62,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          6,
+          9,
+          9,
+          4,
+          6,
+          7,
+          7,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r48",
+    "date": "2025-12-31",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 52,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          6,
+          3,
+          5,
+          7,
+          7,
+          7,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r49",
+    "date": "2026-01-03",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 50,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          4,
+          5,
+          7,
+          8,
+          4,
+          6,
+          7,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r50",
+    "date": "2026-01-08",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 56,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          9,
+          6,
+          5,
+          5,
+          5,
+          7,
+          6,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r51",
     "date": "2026-01-09",
     "course": "San Clemente Municipal Golf Course",
     "holes": "back9",
@@ -162,27 +2019,1273 @@
         "playerId": "p4",
         "grossScore": 50,
         "netScore": 40,
-        "holesData": [null, null, null, null, null, null, null, null, null, 6, 6, 5, 4, 7, 7, 5, 4, 6]
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          5,
+          4,
+          7,
+          7,
+          5,
+          4,
+          6
+        ]
       },
       {
         "playerId": "p7",
         "grossScore": 53,
         "netScore": 45,
-        "holesData": [null, null, null, null, null, null, null, null, null, 7, 10, 6, 3, 6, 4, 6, 5, 6]
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          10,
+          6,
+          3,
+          6,
+          4,
+          6,
+          5,
+          6
+        ]
       },
       {
         "playerId": "p5",
         "grossScore": 52,
         "netScore": 34,
-        "holesData": [null, null, null, null, null, null, null, null, null, 7, 7, 8, 5, 4, 5, 4, 5, 7]
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          7,
+          8,
+          5,
+          4,
+          5,
+          4,
+          5,
+          7
+        ]
       },
       {
         "playerId": "p6",
         "grossScore": 59,
         "netScore": 45,
-        "holesData": [null, null, null, null, null, null, null, null, null, 7, 5, 10, 4, 9, 5, 6, 5, 8]
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          5,
+          10,
+          4,
+          9,
+          5,
+          6,
+          5,
+          8
+        ]
       }
     ],
-    "skinsResults": { "pot": 0, "winners": [] }
+    "skinsResults": {
+      "pot": 0,
+      "winners": []
+    }
+  },
+  {
+    "id": "r52",
+    "date": "2026-01-13",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 56,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          8,
+          6,
+          4,
+          8,
+          6,
+          7,
+          5,
+          6
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 46,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          5,
+          5,
+          3,
+          7,
+          4,
+          5,
+          4,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r53",
+    "date": "2026-01-21",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 49,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          4,
+          6,
+          5,
+          6,
+          6,
+          7,
+          6,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r54",
+    "date": "2026-01-23",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 57,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          8,
+          7,
+          6,
+          5,
+          4,
+          6,
+          7,
+          6
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 49,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          7,
+          5,
+          4,
+          5,
+          3,
+          8,
+          6,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r55",
+    "date": "2026-01-27",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 51,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          3,
+          5,
+          6,
+          5,
+          6,
+          8,
+          6,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r56",
+    "date": "2026-01-28",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 48,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          6,
+          4,
+          5,
+          3,
+          5,
+          8,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r57",
+    "date": "2026-02-06",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 49,
+        "netScore": 39,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          6,
+          4,
+          7,
+          7,
+          5,
+          6,
+          6
+        ]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 61,
+        "netScore": 46,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          7,
+          7,
+          7,
+          6,
+          6,
+          8,
+          7,
+          7
+        ]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 55,
+        "netScore": 38,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          8,
+          9,
+          5,
+          6,
+          5,
+          5,
+          5,
+          5
+        ]
+      }
+    ],
+    "skinsResults": {
+      "pot": 0,
+      "winners": []
+    }
+  },
+  {
+    "id": "r58",
+    "date": "2026-02-10",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 47,
+        "netScore": 36,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 53,
+        "netScore": 37,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          7,
+          6,
+          4,
+          8,
+          4,
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 52,
+        "netScore": 35,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          7,
+          6,
+          5,
+          5,
+          5,
+          8,
+          5,
+          6
+        ]
+      }
+    ],
+    "skinsResults": {
+      "pot": 0,
+      "winners": []
+    }
+  },
+  {
+    "id": "r59",
+    "date": "2026-02-11",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 46,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          3,
+          4,
+          5,
+          7,
+          5,
+          6,
+          6,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r60",
+    "date": "2026-02-13",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 50,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          7,
+          5,
+          6,
+          4,
+          5,
+          5,
+          6
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 50,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          8,
+          7,
+          3,
+          8,
+          5,
+          5,
+          5,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r61",
+    "date": "2026-02-15",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 49,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          5,
+          5,
+          6,
+          8,
+          6,
+          5,
+          3
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r62",
+    "date": "2026-02-17",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 59,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          8,
+          7,
+          5,
+          5,
+          5,
+          9,
+          5,
+          7
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r63",
+    "date": "2026-02-20",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 57,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          9,
+          8,
+          5,
+          7,
+          4,
+          6,
+          5,
+          6
+        ]
+      },
+      {
+        "playerId": "p4",
+        "grossScore": 48,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          6,
+          4,
+          4,
+          4,
+          8,
+          5,
+          6
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r64",
+    "date": "2026-02-22",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 91,
+        "holesData": [
+          4,
+          4,
+          4,
+          5,
+          7,
+          7,
+          6,
+          6,
+          3,
+          5,
+          6,
+          5,
+          5,
+          5,
+          4,
+          6,
+          5,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r65",
+    "date": "2026-02-24",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 46,
+        "netScore": 36,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
+          7,
+          6,
+          5,
+          4,
+          3,
+          6,
+          7,
+          4
+        ]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 52,
+        "netScore": 36,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          8,
+          7,
+          4,
+          7,
+          3,
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 47,
+        "netScore": 31,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          5,
+          3,
+          5,
+          5,
+          3,
+          6,
+          8
+        ]
+      },
+      {
+        "playerId": "p7",
+        "grossScore": 51,
+        "netScore": 39,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          9,
+          5,
+          4,
+          5,
+          4,
+          5,
+          6,
+          6
+        ]
+      }
+    ],
+    "skinsResults": {
+      "pot": 0,
+      "winners": []
+    }
+  },
+  {
+    "id": "r66",
+    "date": "2026-03-03",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p6",
+        "grossScore": 45,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          8,
+          5,
+          3,
+          4,
+          5,
+          5,
+          4,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r67",
+    "date": "2026-03-04",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 41,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
+          3,
+          5,
+          4,
+          6,
+          4,
+          6,
+          5,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r68",
+    "date": "2026-03-06",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 41,
+        "netScore": 31,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
+          6,
+          5,
+          4,
+          5,
+          4,
+          4,
+          5,
+          4
+        ]
+      },
+      {
+        "playerId": "p8",
+        "grossScore": 57,
+        "netScore": 39,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          8,
+          10,
+          5,
+          6,
+          6,
+          6,
+          6,
+          5
+        ]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 50,
+        "netScore": 35,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          5,
+          7,
+          5,
+          6,
+          6,
+          6,
+          5,
+          5
+        ]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 56,
+        "netScore": 42,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          6,
+          7,
+          4,
+          5,
+          4,
+          7,
+          8,
+          8
+        ]
+      }
+    ],
+    "skinsResults": {
+      "pot": 0,
+      "winners": []
+    }
+  },
+  {
+    "id": "r69",
+    "date": "2026-03-08",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 47,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          3,
+          6,
+          6,
+          5,
+          7,
+          6,
+          5,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r70",
+    "date": "2026-03-12",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 48,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          5,
+          4
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r71",
+    "date": "2026-03-13",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "full18",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 89,
+        "holesData": [
+          5,
+          4,
+          4,
+          3,
+          7,
+          6,
+          5,
+          5,
+          4,
+          5,
+          6,
+          5,
+          4,
+          5,
+          5,
+          6,
+          5,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r72",
+    "date": "2026-03-17",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 49,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          8,
+          8,
+          4,
+          5,
+          4,
+          5,
+          5,
+          5
+        ]
+      }
+    ],
+    "skinsAmount": 5
+  },
+  {
+    "id": "r73",
+    "date": "2026-03-20",
+    "course": "San Clemente Municipal Golf Course",
+    "holes": "back9",
+    "players": [
+      {
+        "playerId": "p4",
+        "grossScore": 47,
+        "netScore": 41,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          5,
+          8,
+          3,
+          5,
+          4,
+          7,
+          5,
+          5
+        ]
+      },
+      {
+        "playerId": "p5",
+        "grossScore": 52,
+        "netScore": 38,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          8,
+          6,
+          4,
+          6,
+          5,
+          5,
+          6
+        ]
+      },
+      {
+        "playerId": "p6",
+        "grossScore": 49,
+        "netScore": 34,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          7,
+          5,
+          4,
+          9,
+          4,
+          4,
+          7,
+          3
+        ]
+      },
+      {
+        "playerId": "p7",
+        "grossScore": 49,
+        "netScore": 37,
+        "holesData": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          6,
+          6,
+          6,
+          5,
+          4,
+          7,
+          5,
+          5
+        ]
+      }
+    ],
+    "skinsResults": {
+      "pot": 0,
+      "winners": []
+    }
   }
 ]
