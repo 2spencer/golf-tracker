@@ -26,9 +26,10 @@ export interface Round {
   id: string;
   date: string;
   course: string;
-  holes?: "front9" | "back9" | "full";
+  holes?: "front9" | "back9" | "full18" | "full";
   players: RoundPlayer[];
-  skinsResults: SkinsResults;
+  skinsAmount?: number;
+  skinsResults?: SkinsResults;
 }
 
 export interface SeasonStanding {

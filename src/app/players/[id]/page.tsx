@@ -45,7 +45,7 @@ export default async function PlayerPage({
 
   // Money won
   const moneyWon = playerRounds.reduce((total, r) => {
-    const w = r.skinsResults.winners.find((w) => w.playerId === id);
+    const w = r.skinsResults?.winners.find((w) => w.playerId === id);
     return total + (w ? w.amount : 0);
   }, 0);
 

@@ -70,10 +70,12 @@ export default function RoundsTable({
                   {getGrossWinner(round)}
                 </span>
               </span>
-              <span className="text-sm">
-                <span className="text-gray-400">Skins: </span>
-                <span className="text-gold">${round.skinsResults.pot}</span>
-              </span>
+              {(round.skinsResults || round.skinsAmount) && (
+                <span className="text-sm">
+                  <span className="text-gray-400">Skins: </span>
+                  <span className="text-gold">${round.skinsResults?.pot ?? round.skinsAmount}</span>
+                </span>
+              )}
               <span className="text-gray-400 text-sm">
                 {isExpanded ? "▲" : "▼"}
               </span>
@@ -174,13 +176,13 @@ export default function RoundsTable({
                 </div>
 
                 {/* Skins Results */}
-                {round.skinsResults.winners.length > 0 && (
+                {(round.skinsResults?.winners?.length ?? 0) > 0 && (
                   <div className="mt-4 p-3 bg-forest/50 rounded-lg">
                     <h4 className="text-sm text-gray-400 uppercase mb-2">
-                      Skins (${round.skinsResults.pot} pot)
+                      Skins (${round.skinsResults!.pot} pot)
                     </h4>
                     <div className="flex flex-wrap gap-3">
-                      {round.skinsResults.winners.map((w, i) => (
+                      {round.skinsResults!.winners.map((w, i) => (
                         <span
                           key={i}
                           className="text-sm bg-gold/10 text-gold px-3 py-1 rounded-full"

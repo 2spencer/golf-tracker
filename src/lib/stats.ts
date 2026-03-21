@@ -52,7 +52,7 @@ export function computeSeasonStandings(
       const rp = round.players.find((p) => p.playerId === player.id)!;
       if (rp.grossScore === minGross) wins++;
 
-      const skinWinner = round.skinsResults.winners.find(
+      const skinWinner = round.skinsResults?.winners.find(
         (w) => w.playerId === player.id
       );
       if (skinWinner) moneyWon += skinWinner.amount;
