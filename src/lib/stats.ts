@@ -22,11 +22,14 @@ function getAll9HoleScores(playerId: string, rounds: Round[]): number[] {
     if (isNineHoleRound(round)) {
       scores.push(rp.grossScore);
     } else {
-      // Full 18: split into two 9-hole scores
-      const front9 = sumHoles(rp.holesData.slice(0, 9));
-      const back9 = sumHoles(rp.holesData.slice(9));
-      if (front9 > 0) scores.push(front9);
-      if (back9 > 0) scores.push(back9);
+      // Full 18: split into two 9-hole scores.
+      // Only include a half if all 9 holes have real scores (no zeros = unplayed holes).
+      const front9Holes = rp.holesData.slice(0, 9);
+      const back9Holes = rp.holesData.slice(9);
+      const front9Complete = front9Holes.every((h) => h !== null && h > 0);
+      const back9Complete = back9Holes.every((h) => h !== null && h > 0);
+      if (front9Complete) scores.push(sumHoles(front9Holes));
+      if (back9Complete) scores.push(sumHoles(back9Holes));
     }
   }
   return scores;
