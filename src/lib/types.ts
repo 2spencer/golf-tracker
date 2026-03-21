@@ -40,6 +40,7 @@ export interface SeasonStanding {
   worst9: number;
   wins: number;
   moneyWon: number;
+  lastRound: number | null;
 }
 
 export interface H2HRecord {

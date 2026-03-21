@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import type { SeasonStanding } from "@/lib/types";
 
-type SortKey = "grossAvg9" | "wins" | "moneyWon";
+type SortKey = "grossAvg9" | "wins";
 
 export default function SeasonStandings({
   standings,
@@ -17,7 +17,7 @@ export default function SeasonStandings({
   const sorted = [...standings].sort((a, b) => {
     const aVal = a[sortKey];
     const bVal = b[sortKey];
-    if (sortKey === "moneyWon" || sortKey === "wins") {
+    if (sortKey === "wins") {
       return sortAsc ? (bVal as number) - (aVal as number) : (aVal as number) - (bVal as number);
     }
     return sortAsc ? (aVal as number) - (bVal as number) : (bVal as number) - (aVal as number);
@@ -58,7 +58,7 @@ export default function SeasonStandings({
               <th className="px-3 py-3 text-left whitespace-nowrap">Best</th>
               <th className="px-3 py-3 text-left whitespace-nowrap">Worst</th>
               <SortHeader label="Wins" field="wins" />
-              <SortHeader label="$" field="moneyWon" />
+              <th className="px-3 py-3 text-left whitespace-nowrap">Last</th>
             </tr>
           </thead>
           <tbody>
@@ -92,8 +92,8 @@ export default function SeasonStandings({
                 <td className="px-3 py-4 font-bold text-lg text-gold">
                   {s.wins}
                 </td>
-                <td className="px-3 py-4 font-bold text-lg text-gold">
-                  ${s.moneyWon}
+                <td className="px-3 py-4 font-bold text-lg text-gray-300">
+                  {s.lastRound ?? "—"}
                 </td>
               </tr>
             ))}

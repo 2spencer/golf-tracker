@@ -58,6 +58,22 @@ export function computeSeasonStandings(
       if (skinWinner) moneyWon += skinWinner.amount;
     }
 
+    // Last round: most recent 9-hole score (or back9 of most recent 18-hole round)
+    const sortedRounds = [...playerRounds].sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+    let lastRound: number | null = null;
+    if (sortedRounds.length > 0) {
+      const latest = sortedRounds[0];
+      const rp = latest.players.find((p) => p.playerId === player.id)!;
+      if (isNineHoleRound(latest)) {
+        lastRound = rp.grossScore;
+      } else {
+        const back9 = sumHoles(rp.holesData.slice(9));
+        lastRound = back9 > 0 ? back9 : sumHoles(rp.holesData.slice(0, 9));
+      }
+    }
+
     return {
       player,
       roundsPlayed: playerRounds.length,
@@ -71,6 +87,7 @@ export function computeSeasonStandings(
       worst9: all9Scores.length > 0 ? Math.max(...all9Scores) : 0,
       wins,
       moneyWon,
+      lastRound,
     };
   });
 }
