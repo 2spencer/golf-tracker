@@ -5,8 +5,12 @@ import type { ParsedScorecard } from "@/lib/types";
 
 export default function ImageUpload({
   onParsed,
+  passcode,
+  onPasscodeRejected,
 }: {
   onParsed: (data: ParsedScorecard) => void;
+  passcode: string;
+  onPasscodeRejected: () => void;
 }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -28,8 +32,14 @@ export default function ImageUpload({
             body: JSON.stringify({
               imageBase64: base64,
               mimeType: file.type,
+              passcode,
             }),
           });
+
+          if (res.status === 401) {
+            onPasscodeRejected();
+            return;
+          }
 
           if (!res.ok) {
             const data = await res.json();
@@ -48,7 +58,7 @@ export default function ImageUpload({
       };
       reader.readAsDataURL(file);
     },
-    [onParsed]
+    [onParsed, passcode, onPasscodeRejected]
   );
 
   const handleDrop = useCallback(

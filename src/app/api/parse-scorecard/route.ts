@@ -3,7 +3,12 @@ import Anthropic from "@anthropic-ai/sdk";
 
 export async function POST(request: Request) {
   try {
-    const { imageBase64, mimeType } = await request.json();
+    const { imageBase64, mimeType, passcode } = await request.json();
+
+    const expectedPasscode = process.env.UPLOAD_PASSCODE;
+    if (!expectedPasscode || passcode !== expectedPasscode) {
+      return NextResponse.json({ error: "Invalid passcode" }, { status: 401 });
+    }
 
     if (!process.env.ANTHROPIC_API_KEY) {
       return NextResponse.json(
@@ -15,8 +20,8 @@ export async function POST(request: Request) {
     const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
     const response = await client.messages.create({
-      model: "claude-opus-4-5-20250514",
-      max_tokens: 2048,
+      model: "claude-haiku-4-5-20251001",
+      max_tokens: 1024,
       messages: [
         {
           role: "user",
