@@ -66,9 +66,11 @@ export function computeSeasonStandings(
       (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
     let lastRound: number | null = null;
+    let lastRoundDate: string | null = null;
     if (sortedRounds.length > 0) {
       const latest = sortedRounds[0];
       const rp = latest.players.find((p) => p.playerId === player.id)!;
+      lastRoundDate = latest.date;
       if (isNineHoleRound(latest)) {
         lastRound = rp.grossScore;
       } else {
@@ -91,6 +93,7 @@ export function computeSeasonStandings(
       wins,
       moneyWon,
       lastRound,
+      lastRoundDate,
     };
   });
 }

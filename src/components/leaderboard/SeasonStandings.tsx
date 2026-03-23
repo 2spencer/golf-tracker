@@ -92,8 +92,13 @@ export default function SeasonStandings({
                 <td className="px-3 py-4 font-bold text-lg text-gold">
                   {s.wins}
                 </td>
-                <td className="px-3 py-4 font-bold text-lg text-gray-300">
-                  {s.lastRound ?? "—"}
+                <td className="px-3 py-4">
+                  <div className="font-bold text-lg text-gray-300">{s.lastRound ?? "—"}</div>
+                  {s.lastRoundDate && (
+                    <div className="text-xs text-gray-500">
+                      {new Date(s.lastRoundDate + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                    </div>
+                  )}
                 </td>
               </tr>
             ))}

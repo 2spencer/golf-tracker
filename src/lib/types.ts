@@ -41,6 +41,7 @@ export interface SeasonStanding {
   wins: number;
   moneyWon: number;
   lastRound: number | null;
+  lastRoundDate: string | null;
 }
 
 export interface H2HRecord {
