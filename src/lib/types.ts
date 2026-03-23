@@ -39,7 +39,6 @@ export interface SeasonStanding {
   best9: number;
   worst9: number;
   wins: number;
-  moneyWon: number;
   lastRound: number | null;
   lastRoundDate: string | null;
 }

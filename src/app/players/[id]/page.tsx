@@ -43,12 +43,6 @@ export default async function PlayerPage({
   const favoriteCourse =
     Object.entries(courseCount).sort((a, b) => b[1] - a[1])[0]?.[0] || "N/A";
 
-  // Money won
-  const moneyWon = playerRounds.reduce((total, r) => {
-    const w = r.skinsResults?.winners.find((w) => w.playerId === id);
-    return total + (w ? w.amount : 0);
-  }, 0);
-
   return (
     <div className="space-y-8">
       {/* Header */}
@@ -78,7 +72,6 @@ export default async function PlayerPage({
           { label: "Scoring Avg", value: grossAvg, color: "text-white" },
           { label: "Best Round", value: bestGross, color: "text-green-light" },
           { label: "Worst Round", value: worstGross, color: "text-red-400" },
-          { label: "Money Won", value: `$${moneyWon}`, color: "text-gold" },
           { label: "Fav Course", value: favoriteCourse, color: "text-white", small: true },
         ].map((stat) => (
           <div

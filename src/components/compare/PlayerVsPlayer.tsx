@@ -46,7 +46,7 @@ export default function PlayerVsPlayer({
 
   const front9Back9 = useMemo(() => {
     return data.map((d) => ({
-      date: new Date(d.date).toLocaleDateString("en-US", { month: "short", day: "numeric" }),
+      date: new Date(d.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" }),
       [`${p1?.name} F9`]: d.p1Front,
       [`${p1?.name} B9`]: d.p1Back,
       [`${p2?.name} F9`]: d.p2Front,
@@ -120,7 +120,7 @@ export default function PlayerVsPlayer({
             <ResponsiveContainer width="100%" height={250}>
               <LineChart
                 data={data.map((d) => ({
-                  date: new Date(d.date).toLocaleDateString("en-US", {
+                  date: new Date(d.date + "T12:00:00").toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
                   }),

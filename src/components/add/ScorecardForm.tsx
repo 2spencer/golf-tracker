@@ -29,7 +29,6 @@ export default function ScorecardForm({
   const [date, setDate] = useState(
     initialData.date || new Date().toISOString().split("T")[0]
   );
-  const [skinsPot, setSkinsPot] = useState(0);
   const [saving, setSaving] = useState(false);
 
   const matchPlayer = (name: string): string | null => {
@@ -99,17 +98,8 @@ export default function ScorecardForm({
     }
   };
 
-  const showDebug = (msg: string) => {
-    const el = document.createElement("pre");
-    el.style.cssText = "position:fixed;top:0;left:0;right:0;background:#000;color:lime;padding:16px;z-index:9999;font-size:12px;white-space:pre-wrap;word-break:break-all;";
-    el.textContent = msg;
-    document.body.appendChild(el);
-    setTimeout(() => el.remove(), 15000);
-  };
-
   const handleSave = async () => {
     setSaving(true);
-    showDebug("Starting save...");
     try {
       let updatedPlayers = [...existingPlayers];
 
@@ -156,10 +146,6 @@ export default function ScorecardForm({
         date,
         course,
         players: roundPlayers,
-        skinsResults: {
-          pot: skinsPot,
-          winners: [],
-        },
       };
 
       const res = await fetch("/api/rounds", {
@@ -173,11 +159,10 @@ export default function ScorecardForm({
         throw new Error(data.error || `Save failed (${res.status})`);
       }
 
-      showDebug("SAVE RESPONSE:\n" + JSON.stringify(data, null, 2));
       onSaved();
     } catch (err) {
       console.error("Save error:", err);
-      showDebug("SAVE ERROR:\n" + (err instanceof Error ? err.message + "\n" + err.stack : String(err)));
+      alert("Failed to save: " + (err instanceof Error ? err.message : String(err)));
     } finally {
       setSaving(false);
     }
@@ -206,18 +191,6 @@ export default function ScorecardForm({
               value={date}
               onChange={(e) => setDate(e.target.value)}
               className="w-full bg-forest border border-forest-lighter rounded-lg px-3 py-2 text-white"
-            />
-          </div>
-          <div>
-            <label className="text-sm text-gray-400 block mb-1">
-              Skins Pot ($)
-            </label>
-            <input
-              type="number"
-              value={skinsPot}
-              onChange={(e) => setSkinsPot(Number(e.target.value))}
-              className="w-full bg-forest border border-forest-lighter rounded-lg px-3 py-2 text-white"
-              min={0}
             />
           </div>
         </div>

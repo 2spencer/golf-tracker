@@ -25,7 +25,7 @@ export default function PlayerCharts({
   roundScores: RoundScore[];
 }) {
   const chartData = roundScores.map((r) => ({
-    date: new Date(r.date).toLocaleDateString("en-US", {
+    date: new Date(r.date + "T12:00:00").toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
     }),

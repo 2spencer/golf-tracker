@@ -48,17 +48,11 @@ export function computeSeasonStandings(
 
     // Wins: lowest gross in the round (comparing apples to apples per round)
     let wins = 0;
-    let moneyWon = 0;
 
     for (const round of playerRounds) {
       const minGross = Math.min(...round.players.map((p) => p.grossScore));
       const rp = round.players.find((p) => p.playerId === player.id)!;
       if (rp.grossScore === minGross) wins++;
-
-      const skinWinner = round.skinsResults?.winners.find(
-        (w) => w.playerId === player.id
-      );
-      if (skinWinner) moneyWon += skinWinner.amount;
     }
 
     // Last round: most recent 9-hole score (or back9 of most recent 18-hole round)
@@ -91,7 +85,6 @@ export function computeSeasonStandings(
       best9: all9Scores.length > 0 ? Math.min(...all9Scores) : 0,
       worst9: all9Scores.length > 0 ? Math.max(...all9Scores) : 0,
       wins,
-      moneyWon,
       lastRound,
       lastRoundDate,
     };

@@ -253,7 +253,7 @@ export default function TeamVsTeam({
                   className="w-full px-5 py-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-left hover:bg-forest-lighter/30 transition-colors"
                 >
                   <span className="text-gray-400 text-sm min-w-[80px]">
-                    {new Date(r.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                    {new Date(r.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
                   </span>
                   <span className="text-white font-semibold flex-1">{r.course}</span>
 
