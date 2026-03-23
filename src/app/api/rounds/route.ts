@@ -15,8 +15,12 @@ export async function POST(request: Request) {
       ...body,
       id: body.id || uuidv4(),
     };
+
+    const redisUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+    const hasRedis = !!redisUrl;
+
     await addRound(round);
-    return NextResponse.json({ saved: true, round }, { status: 201 });
+    return NextResponse.json({ saved: true, hasRedis, round }, { status: 201 });
   } catch (err) {
     return NextResponse.json(
       { saved: false, error: String(err), stack: (err as Error).stack },
