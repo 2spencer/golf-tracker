@@ -19,10 +19,18 @@ export async function GET() {
   try {
     const { Redis } = await import("@upstash/redis");
     const redis = new Redis({ url, token });
+
+    // Test write
+    await redis.set("test_write", { timestamp: new Date().toISOString(), msg: "hello" });
+    const testRead = await redis.get("test_write");
+
+    // Read existing data
     const extraRounds = await redis.get("extra_rounds");
     const extraPlayers = await redis.get("extra_players");
+
     return NextResponse.json({
       redis: true,
+      writeTest: testRead,
       extraRounds,
       extraPlayers,
     });
