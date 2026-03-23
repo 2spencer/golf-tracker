@@ -5,13 +5,16 @@ import type { Player, Round } from "./types";
 const DATA_DIR = path.join(process.cwd(), "data");
 
 // Redis (Upstash) is only used in production. Locally, we write directly to JSON files.
-const useRedis = !!process.env.UPSTASH_REDIS_REST_URL;
+// Vercel's Upstash integration sets KV_REST_API_URL / KV_REST_API_TOKEN.
+const redisUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+const redisToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+const useRedis = !!(redisUrl && redisToken);
 
 async function getRedis() {
   const { Redis } = await import("@upstash/redis");
   return new Redis({
-    url: process.env.UPSTASH_REDIS_REST_URL!,
-    token: process.env.UPSTASH_REDIS_REST_TOKEN!,
+    url: redisUrl!,
+    token: redisToken!,
   });
 }
 
