@@ -99,8 +99,17 @@ export default function ScorecardForm({
     }
   };
 
+  const showDebug = (msg: string) => {
+    const el = document.createElement("pre");
+    el.style.cssText = "position:fixed;top:0;left:0;right:0;background:#000;color:lime;padding:16px;z-index:9999;font-size:12px;white-space:pre-wrap;word-break:break-all;";
+    el.textContent = msg;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 15000);
+  };
+
   const handleSave = async () => {
     setSaving(true);
+    showDebug("Starting save...");
     try {
       let updatedPlayers = [...existingPlayers];
 
@@ -164,17 +173,11 @@ export default function ScorecardForm({
         throw new Error(data.error || `Save failed (${res.status})`);
       }
 
-      // Temp debug: show response in the page
-      const debugEl = document.createElement("pre");
-      debugEl.style.cssText = "position:fixed;top:0;left:0;right:0;background:black;color:lime;padding:16px;z-index:9999;font-size:12px;white-space:pre-wrap;";
-      debugEl.textContent = "SAVE RESPONSE:\n" + JSON.stringify(data, null, 2);
-      document.body.appendChild(debugEl);
-      setTimeout(() => debugEl.remove(), 10000);
-
+      showDebug("SAVE RESPONSE:\n" + JSON.stringify(data, null, 2));
       onSaved();
     } catch (err) {
       console.error("Save error:", err);
-      alert("Failed to save: " + (err instanceof Error ? err.message : String(err)));
+      showDebug("SAVE ERROR:\n" + (err instanceof Error ? err.message + "\n" + err.stack : String(err)));
     } finally {
       setSaving(false);
     }
