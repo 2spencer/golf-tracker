@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import type { Player, Round } from "@/lib/types";
 
 export default function RoundsTable({
@@ -11,6 +12,8 @@ export default function RoundsTable({
   players: Player[];
 }) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+  const router = useRouter();
 
   const getPlayerName = (id: string) =>
     players.find((p) => p.id === id)?.name || "Unknown";
@@ -19,6 +22,22 @@ export default function RoundsTable({
     const min = Math.min(...round.players.map((p) => p.grossScore));
     const winner = round.players.find((p) => p.grossScore === min);
     return winner ? getPlayerName(winner.playerId) : "";
+  };
+
+  const handleDelete = async (id: string) => {
+    if (!confirm("Delete this round? This cannot be undone.")) return;
+    setDeletingId(id);
+    try {
+      const res = await fetch(`/api/rounds/${id}`, { method: "DELETE" });
+      if (res.ok) {
+        router.refresh();
+      } else {
+        const err = await res.json().catch(() => ({}));
+        alert("Could not delete: " + (err.error || res.status));
+      }
+    } finally {
+      setDeletingId(null);
+    }
   };
 
   const isNineHole = (round: Round) =>
@@ -168,7 +187,15 @@ export default function RoundsTable({
                     </tbody>
                   </table>
                 </div>
-
+                <div className="mt-4 flex justify-end">
+                  <button
+                    onClick={() => handleDelete(round.id)}
+                    disabled={deletingId === round.id}
+                    className="text-xs text-red-400 hover:text-red-300 border border-red-400/30 hover:border-red-300/50 px-3 py-1.5 rounded-lg transition-colors disabled:opacity-50"
+                  >
+                    {deletingId === round.id ? "Deleting…" : "Delete Round"}
+                  </button>
+                </div>
               </div>
             )}
           </div>
