@@ -159,11 +159,12 @@ export default function ScorecardForm({
         body: JSON.stringify(round),
       });
 
+      const data = await res.json().catch(() => ({}));
       if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.error || `Save failed (${res.status})`);
+        throw new Error(data.error || `Save failed (${res.status})`);
       }
 
+      alert("DEBUG: " + JSON.stringify(data));
       onSaved();
     } catch (err) {
       console.error("Save error:", err);
