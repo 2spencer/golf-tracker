@@ -164,7 +164,13 @@ export default function ScorecardForm({
         throw new Error(data.error || `Save failed (${res.status})`);
       }
 
-      alert("DEBUG: " + JSON.stringify(data));
+      // Temp debug: show response in the page
+      const debugEl = document.createElement("pre");
+      debugEl.style.cssText = "position:fixed;top:0;left:0;right:0;background:black;color:lime;padding:16px;z-index:9999;font-size:12px;white-space:pre-wrap;";
+      debugEl.textContent = "SAVE RESPONSE:\n" + JSON.stringify(data, null, 2);
+      document.body.appendChild(debugEl);
+      setTimeout(() => debugEl.remove(), 10000);
+
       onSaved();
     } catch (err) {
       console.error("Save error:", err);
