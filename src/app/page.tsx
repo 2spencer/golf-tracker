@@ -19,6 +19,15 @@ export default async function HomePage() {
           <span className="text-sm text-gray-400 bg-forest-light px-3 py-1 rounded-full">
             {rounds.length} rounds played
           </span>
+          {rounds[0] && (
+            <span className="text-sm text-gray-400 bg-forest-light px-3 py-1 rounded-full">
+              Last:{" "}
+              {new Date(rounds[0].date + "T12:00:00").toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+              })}
+            </span>
+          )}
         </div>
 
         <div className="bg-forest-light border border-forest-lighter rounded-xl overflow-hidden mb-8">
