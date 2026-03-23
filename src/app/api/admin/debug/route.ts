@@ -4,9 +4,18 @@ export async function GET() {
   const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
 
+  // Show all KV and UPSTASH env vars
+  const allEnv: Record<string, string | undefined> = {};
+  for (const [key, value] of Object.entries(process.env)) {
+    if (key.startsWith("KV_") || key.startsWith("UPSTASH_")) {
+      allEnv[key] = value ? "***" : undefined; // Hide actual values
+    }
+  }
+
   if (!url || !token) {
     return NextResponse.json({
       redis: false,
+      allEnvVars: allEnv,
       env: {
         KV_REST_API_URL: !!process.env.KV_REST_API_URL,
         KV_REST_API_TOKEN: !!process.env.KV_REST_API_TOKEN,
@@ -30,6 +39,7 @@ export async function GET() {
 
     return NextResponse.json({
       redis: true,
+      allEnvVars,
       writeTest: testRead,
       extraRounds,
       extraPlayers,
