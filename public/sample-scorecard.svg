@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <!-- Background -->
+  <rect width="480" height="300" rx="12" fill="#1a1a2e"/>
+
+  <!-- Header -->
+  <rect width="480" height="44" rx="12" fill="#2d5016"/>
+  <rect y="32" width="480" height="12" fill="#2d5016"/>
+  <text x="240" y="28" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f0c040" text-anchor="middle">Torrey Pines South — Jun 14, 2025</text>
+
+  <!-- Column headers -->
+  <text x="16" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af">PLAYER</text>
+  <!-- Hole numbers -->
+  <text x="110" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">1</text>
+  <text x="140" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2</text>
+  <text x="170" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">3</text>
+  <text x="200" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">4</text>
+  <text x="230" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">5</text>
+  <text x="260" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">6</text>
+  <text x="290" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">7</text>
+  <text x="320" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">8</text>
+  <text x="350" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">9</text>
+  <text x="390" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">TOT</text>
+  <text x="430" y="68" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">+/-</text>
+
+  <!-- Divider -->
+  <line x1="8" y1="74" x2="472" y2="74" stroke="#374151" stroke-width="1"/>
+
+  <!-- Par row -->
+  <text x="16" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Par</text>
+  <text x="110" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">4</text>
+  <text x="140" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">5</text>
+  <text x="170" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">3</text>
+  <text x="200" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">4</text>
+  <text x="230" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">4</text>
+  <text x="260" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">3</text>
+  <text x="290" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">4</text>
+  <text x="320" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">5</text>
+  <text x="350" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">4</text>
+  <text x="390" y="90" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">36</text>
+
+  <!-- Divider -->
+  <line x1="8" y1="96" x2="472" y2="96" stroke="#374151" stroke-width="1"/>
+
+  <!-- Player 1 row -->
+  <text x="16" y="116" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Spencer</text>
+  <!-- Birdie circle -->
+  <circle cx="110" cy="112" r="10" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="110" y="116" font-family="Arial, sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle">3</text>
+  <!-- Par -->
+  <text x="140" y="116" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">5</text>
+  <!-- Bogey box -->
+  <rect x="161" y="103" width="18" height="18" rx="2" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="170" y="116" font-family="Arial, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">4</text>
+  <text x="200" y="116" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+  <!-- Birdie -->
+  <circle cx="230" cy="112" r="10" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="230" y="116" font-family="Arial, sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle">3</text>
+  <text x="260" y="116" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">3</text>
+  <!-- Double bogey double box -->
+  <rect x="281" y="103" width="18" height="18" rx="2" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="283" y="105" width="14" height="14" rx="1" fill="none" stroke="#ef4444" stroke-width="1"/>
+  <text x="290" y="116" font-family="Arial, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">6</text>
+  <text x="320" y="116" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="350" y="116" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="390" y="116" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">37</text>
+  <text x="430" y="116" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="middle">+1</text>
+
+  <!-- Divider -->
+  <line x1="8" y1="126" x2="472" y2="126" stroke="#374151" stroke-width="1"/>
+
+  <!-- Player 2 row -->
+  <text x="16" y="146" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Mike</text>
+  <text x="110" y="146" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+  <!-- Eagle double circle -->
+  <circle cx="140" cy="142" r="10" fill="none" stroke="#f0c040" stroke-width="1.5"/>
+  <circle cx="140" cy="142" r="7" fill="none" stroke="#f0c040" stroke-width="1"/>
+  <text x="140" y="146" font-family="Arial, sans-serif" font-size="11" fill="#f0c040" text-anchor="middle">3</text>
+  <text x="170" y="146" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">3</text>
+  <!-- Bogey -->
+  <rect x="191" y="133" width="18" height="18" rx="2" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="200" y="146" font-family="Arial, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">5</text>
+  <text x="230" y="146" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+  <!-- Birdie -->
+  <circle cx="260" cy="142" r="10" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="260" y="146" font-family="Arial, sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle">2</text>
+  <text x="290" y="146" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="320" y="146" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">5</text>
+  <!-- Birdie -->
+  <circle cx="350" cy="142" r="10" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="350" y="146" font-family="Arial, sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle">3</text>
+  <text x="390" y="146" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">33</text>
+  <text x="430" y="146" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">-3</text>
+
+  <!-- Divider -->
+  <line x1="8" y1="156" x2="472" y2="156" stroke="#374151" stroke-width="1"/>
+
+  <!-- Player 3 row -->
+  <text x="16" y="176" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Dave</text>
+  <!-- Bogey -->
+  <rect x="101" y="163" width="18" height="18" rx="2" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="110" y="176" font-family="Arial, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">5</text>
+  <text x="140" y="176" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="170" y="176" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="200" y="176" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+  <!-- Bogey -->
+  <rect x="221" y="163" width="18" height="18" rx="2" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="230" y="176" font-family="Arial, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">5</text>
+  <text x="260" y="176" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">3</text>
+  <!-- Birdie -->
+  <circle cx="290" cy="172" r="10" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="290" y="176" font-family="Arial, sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle">3</text>
+  <text x="320" y="176" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">5</text>
+  <!-- Bogey -->
+  <rect x="341" y="163" width="18" height="18" rx="2" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="350" y="176" font-family="Arial, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">5</text>
+  <text x="390" y="176" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">38</text>
+  <text x="430" y="176" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="middle">+2</text>
+
+  <!-- Legend -->
+  <line x1="8" y1="192" x2="472" y2="192" stroke="#374151" stroke-width="1"/>
+  <circle cx="24" cy="210" r="8" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="36" y="214" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af">Birdie</text>
+  <circle cx="80" cy="210" r="8" fill="none" stroke="#f0c040" stroke-width="1.5"/>
+  <circle cx="80" cy="210" r="5" fill="none" stroke="#f0c040" stroke-width="1"/>
+  <text x="92" y="214" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af">Eagle</text>
+  <rect x="136" y="202" width="16" height="16" rx="2" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="156" y="214" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af">Bogey</text>
+  <rect x="208" y="202" width="16" height="16" rx="2" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="210" y="204" width="12" height="12" rx="1" fill="none" stroke="#ef4444" stroke-width="1"/>
+  <text x="228" y="214" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af">Double</text>
+
+  <!-- Bottom note -->
+  <text x="240" y="255" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Screenshot must show all hole scores for each player</text>
+  <text x="240" y="272" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Works with golf apps, photos of paper scorecards, and scoreboard screenshots</text>
+</svg>

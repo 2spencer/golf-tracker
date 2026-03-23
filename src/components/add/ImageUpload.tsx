@@ -71,6 +71,23 @@ export default function ImageUpload({
   );
 
   return (
+    <div className="space-y-4">
+      {/* Sample image guidance */}
+      <div className="rounded-xl border border-forest-lighter bg-forest/40 p-4">
+        <p className="text-sm font-semibold text-gold mb-2">
+          Example: Upload a screenshot like this
+        </p>
+        <img
+          src="/sample-scorecard.svg"
+          alt="Example scorecard screenshot showing hole-by-hole scores for each player"
+          className="w-full rounded-lg mb-2"
+        />
+        <p className="text-xs text-gray-400">
+          Your screenshot should show each player&apos;s score for every hole. Works with golf app
+          screenshots, photos of paper scorecards, or digital scoreboard captures.
+        </p>
+      </div>
+
     <div
       onDrop={handleDrop}
       onDragOver={(e) => e.preventDefault()}
@@ -120,6 +137,7 @@ export default function ImageUpload({
           {error}
         </div>
       )}
+    </div>
     </div>
   );
 }
