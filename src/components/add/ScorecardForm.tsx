@@ -167,6 +167,7 @@ export default function ScorecardForm({
       onSaved();
     } catch (err) {
       console.error("Save error:", err);
+      alert("Failed to save: " + (err instanceof Error ? err.message : String(err)));
     } finally {
       setSaving(false);
     }

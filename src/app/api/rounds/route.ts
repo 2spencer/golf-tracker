@@ -16,11 +16,10 @@ export async function POST(request: Request) {
       id: body.id || uuidv4(),
     };
     await addRound(round);
-    return NextResponse.json(round, { status: 201 });
+    return NextResponse.json({ saved: true, round }, { status: 201 });
   } catch (err) {
-    console.error("Failed to save round:", err);
     return NextResponse.json(
-      { error: String(err) },
+      { saved: false, error: String(err), stack: (err as Error).stack },
       { status: 500 }
     );
   }
