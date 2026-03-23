@@ -9,11 +9,19 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  const body = await request.json();
-  const round: Round = {
-    ...body,
-    id: body.id || uuidv4(),
-  };
-  await addRound(round);
-  return NextResponse.json(round, { status: 201 });
+  try {
+    const body = await request.json();
+    const round: Round = {
+      ...body,
+      id: body.id || uuidv4(),
+    };
+    await addRound(round);
+    return NextResponse.json(round, { status: 201 });
+  } catch (err) {
+    console.error("Failed to save round:", err);
+    return NextResponse.json(
+      { error: String(err) },
+      { status: 500 }
+    );
+  }
 }

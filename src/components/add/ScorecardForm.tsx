@@ -153,11 +153,16 @@ export default function ScorecardForm({
         },
       };
 
-      await fetch("/api/rounds", {
+      const res = await fetch("/api/rounds", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(round),
       });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error || `Save failed (${res.status})`);
+      }
 
       onSaved();
     } catch (err) {
